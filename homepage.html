@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniBudget - Lo-Fi Prototype</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script src="scipts.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>UniBudget - Lo-Fi Prototype</h1>
+</header>
+
+<div class="container">
+
+    <!-- Personalized Budgeting Tools -->
+    <section class="budget-section">
+        <h2>Personalized Budgeting Tools</h2>
+        <label for="currency">Currency:</label>
+        <select id="currency">
+            <option value="$">USD ($)</option>
+            <option value="₹">INR (₹)</option>
+            <option value="€">EUR (€)</option>
+            <option value="£">GBP (£)</option>
+        </select>
+        <br><br>
+        <label for="monthlyIncome">Monthly Income:</label>
+        <input type="number" id="monthlyIncome" placeholder="Enter monthly income...">
+        <br><br>
+        <label for="monthlyExpenses">Monthly Expenses:</label>
+        <input type="number" id="monthlyExpenses" placeholder="Enter monthly expenses...">
+        <br><br>
+        <button onclick="calculateBudget()">Calculate Budget</button>
+        <p><strong>Recommended Monthly Spending Limit:</strong> <span id="currencySymbol">$</span><span id="recommendedLimit">0.00</span></p>
+    </section>
+
+    <!-- Expense Tracking -->
+    <section class="expense-section">
+        <h2>Expense Tracking</h2>
+        <label for="expenseCategory">Expense Category:</label>
+        <input type="text" id="expenseCategory" placeholder="Enter expense category...">
+        <br><br>
+        <label for="expenseAmount">Expense Amount:</label>
+        <input type="number" id="expenseAmount" placeholder="Enter expense amount...">
+        <br><br>
+        <button onclick="addExpense()">Add Expense</button>
+        <ul id="expenseList">
+            <!-- Expenses will be displayed here -->
+        </ul>
+    </section>
+
+    <!-- Saving Goals -->
+    <section class="saving-section">
+        <h2>Saving Goals</h2>
+        <label for="savingGoal">Saving Goal:</label>
+        <input type="number" id="savingGoal" placeholder="Enter saving goal...">
+        <br><br>
+        <button onclick="setSavingGoal()">Set Saving Goal</button>
+        <p><strong>Progress Towards Saving Goal:</strong> <span id="currencySymbol">$</span><span id="savingProgress">0.00</span></p>
+    </section>
+
+</div>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
